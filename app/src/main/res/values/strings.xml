@@ -6,4 +6,9 @@
         <item value="humanities">Humanities</item>
         <item value="business-studies">Business Studies</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Profile Fragment</string>
+    <string name="hello_blank_fragment2">University Fragment</string>
+    <string name="universities">Universities</string>
+    <string name="profile">Profile</string>
 </resources>
