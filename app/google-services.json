@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "918819071296",
+    "project_id": "university-admission-navigator",
+    "storage_bucket": "university-admission-navigator.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918819071296:android:f3994f96f83bbb3e10c6a5",
+        "android_client_info": {
+          "package_name": "com.edgeproject.universityadmissionnavigator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLrTEbOwzBzuJNU_dWqwJdSXY9NvG7r7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918819071296:android:77043ee00e4cada610c6a5",
+        "android_client_info": {
+          "package_name": "com.edgeproject.universityadmissionnavigator2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLrTEbOwzBzuJNU_dWqwJdSXY9NvG7r7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

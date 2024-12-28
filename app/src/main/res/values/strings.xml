@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">University Admission Navigator2</string>
+
+    <string-array name="options_array">
+        <item value="science">Science</item>
+        <item value="humanities">Humanities</item>
+        <item value="business-studies">Business Studies</item>
+    </string-array>
+</resources>
