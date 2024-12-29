@@ -37,10 +37,13 @@ class SignUpActivity : AppCompatActivity() {
         binding.signUpButton.setOnClickListener {
             val email = binding.tvemail.text.toString()
             val password = binding.tvpassword.text.toString()
-            val sscgpa = binding.tvsscgpa.text.toString()
-            val hscgpa = binding.tvhscgpa.text.toString()
+            val sscgpaString = binding.tvsscgpa.text.toString()
+            val hscgpaString = binding.tvhscgpa.text.toString()
 
-            if (email.isNotEmpty() && password.isNotEmpty() && sscgpa.isNotEmpty() && hscgpa.isNotEmpty()) {
+            if (email.isNotEmpty() && password.isNotEmpty() && sscgpaString.isNotEmpty() && hscgpaString.isNotEmpty()) {
+                val sscgpa = sscgpaString.toDoubleOrNull()
+                val hscgpa = hscgpaString.toDoubleOrNull()
+
                 firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         val userId = firebaseAuth.currentUser?.uid ?: return@addOnCompleteListener
