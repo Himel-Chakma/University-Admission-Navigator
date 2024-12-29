@@ -44,6 +44,7 @@ class UniversityFragment : Fragment() {
             val sscgpa = document.getDouble("sscgpa") ?: return@addOnSuccessListener
             val hscgpa = document.getDouble("hscgpa") ?: return@addOnSuccessListener
             val totalgpa = sscgpa + hscgpa
+            val group = document.getString("group") ?: return@addOnSuccessListener
 
             // Query all universities
             // Assume adapter is already initialized
@@ -62,8 +63,10 @@ class UniversityFragment : Fragment() {
                         .whereLessThanOrEqualTo("sscgpa", sscgpa)
                         .whereLessThanOrEqualTo("hscgpa", hscgpa)
                         .whereLessThanOrEqualTo("totalgpa", totalgpa)
+                        .whereEqualTo("group", group)
                         .get()
                         .addOnSuccessListener { unitSnapshot ->
+                            Log.d("Units", "Units found: ${unitSnapshot.documents.size}")
                             val units = unitSnapshot.documents.mapNotNull { unitDoc ->
                                 UnitWithUniversity(
                                     universityName = universityName,

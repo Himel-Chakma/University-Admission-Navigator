@@ -1,5 +1,6 @@
 package com.edgeproject.universityadmissionnavigator2
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,6 +41,13 @@ class ProfileFragment : Fragment() {
                 tvsscgpa.setText(documentSnapshot.getDouble("sscgpa")?.toString() ?: "")
                 tvhscgpa.setText(documentSnapshot.getDouble("hscgpa")?.toString() ?: "")
             }
+        }
+
+        binding.btnLogout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            Toast.makeText(requireContext(), "Logged out successfully", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(requireContext(), SignInActivity::class.java))
+            requireActivity().finish()
         }
 
         binding.signUpButton.setOnClickListener {

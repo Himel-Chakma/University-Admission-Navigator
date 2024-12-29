@@ -39,6 +39,7 @@ class SignUpActivity : AppCompatActivity() {
             val password = binding.tvpassword.text.toString()
             val sscgpaString = binding.tvsscgpa.text.toString()
             val hscgpaString = binding.tvhscgpa.text.toString()
+            val group = binding.spinnerGroup.selectedItem.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty() && sscgpaString.isNotEmpty() && hscgpaString.isNotEmpty()) {
                 val sscgpa = sscgpaString.toDoubleOrNull()
@@ -52,7 +53,8 @@ class SignUpActivity : AppCompatActivity() {
                             "email" to email,
                             "password" to password,
                             "sscgpa" to sscgpa,
-                            "hscgpa" to hscgpa
+                            "hscgpa" to hscgpa,
+                            "group" to group
                         )
                         db.collection("users").document(userId).set(user)
                             .addOnSuccessListener {

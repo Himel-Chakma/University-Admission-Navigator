@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">University Admission Navigator2</string>
+    <string name="app_name">University Admission Navigator</string>
 
-    <string-array name="options_array">
-        <item value="science">Science</item>
-        <item value="humanities">Humanities</item>
-        <item value="business-studies">Business Studies</item>
+    <string-array name="group_options">
+        <item>Science</item>
+        <item>Humanities</item>
+        <item>Business</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Profile Fragment</string>
